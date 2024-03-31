@@ -20,7 +20,7 @@ class SingleLinkList {
        int item;
        Node next;
 
-       public void setitem(int item) {
+       public  void setitem(int item) {
            this.item = item;
        }
 
