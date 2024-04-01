@@ -1,1 +1,1 @@
-class DoublyLinkedList
+data
