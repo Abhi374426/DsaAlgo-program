@@ -152,7 +152,7 @@ void printList(){
     Node t;
     t=last.getnext();
     // System.out.println();
-    // while (t.getnext()!=last.getnext()) {
+    // while (last.getnext()!=t) {
     //       System.out.println(t.getitem()+" ");
     //       t=t.getnext();
     // }
@@ -160,5 +160,6 @@ void printList(){
         System.out.print(t.getitem()+" ");
         t=t.getnext();
     }while(t!=last.getnext());
+    
 }
 }
