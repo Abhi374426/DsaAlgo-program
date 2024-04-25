@@ -3,10 +3,10 @@ public class Recursion {
         inner s1=new inner();
         // s1.printN(10);
         // s1.printInRevers(3);
-        // s1.printeven(10);
+       System.out.println( s1.printeven(10));
         // s1.printevenrevers(10);
         // s1.printoddnum(10);
-        s1.printoddnumrev(10);
+        // s1.printoddnumrev(10);
     }
    
 }
@@ -24,27 +24,16 @@ public void printInRevers(int n)
         printInRevers(n-1);
     }
 }
-public void printeven(int n){
-    if (n>0) {
-        printeven(n-1);
-        if (n%2==0) {
-            System.out.println(n);
+public int printeven(int n){
+    if (n==0) {
+       return 2;
 
         }
+        return n*2+printeven(n-1);
       
     }
 }
-public void printevenrevers(int n){
-    if (n>0) {
-       
-        if (n%2==0) {
-            System.out.println(n);
 
-        }
-        printevenrevers(n-1);
-      
-    }
-}
 public void printoddnum(int n){
     if (n>0) {
        printoddnum(n-1);
@@ -70,4 +59,4 @@ public void printoddnumrev(int n){
     }
 }
 
-}
+
