@@ -138,18 +138,22 @@ class BST {
                 return ptr.left;
             }
 
-            Node predecessor = findPredecessor(ptr.left);
-            ptr.data = predecessor.data;
-            ptr.left = deleteNode(ptr.left, predecessor.data);
+            Node pred,parpred;
+            parpred=ptr;
+            pred=ptr.left;
+            while(pred.right!=null){
+                parpred=pred;
+                pred=pred.right;
+            }
+            ptr.data=pred.data;
+            if(parpred.right==pred)
+                parpred.right=deleteNode(pred,pred.data);
+            else if(parpred.left==pred)
+                parpred.left=deleteNode(pred,pred.data);
+
         }
         return ptr;
     }
 
-    Node findPredecessor(Node node) {
-        Node current = node;
-        while (current.right != null) {
-            current = current.right;
-        }
-        return current;
-    }
+    
 }
